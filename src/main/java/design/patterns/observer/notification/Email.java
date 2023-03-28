@@ -2,9 +2,12 @@ package design.patterns.observer.notification;
 
 import design.patterns.observer.order.Order;
 
-public class Email {
+public class Email implements Observer {
 
-    public void updateOrderStatus(Order order) {
+    @Override
+    public void updateStatus(Order order) {
         System.out.println("EMAIL SERVICE: Order " + order.getOrderStatus() + " has been sent");
     }
+
+
 }
