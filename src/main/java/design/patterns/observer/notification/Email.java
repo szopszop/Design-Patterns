@@ -6,7 +6,7 @@ public class Email implements Observer {
 
     @Override
     public void updateStatus(Order order) {
-        System.out.println("EMAIL SERVICE: Order " + order.getOrderStatus() + " has been sent");
+        System.out.println("EMAIL SERVICE: Order " + order.getOrderNumber() + " has been sent");
     }
 
 

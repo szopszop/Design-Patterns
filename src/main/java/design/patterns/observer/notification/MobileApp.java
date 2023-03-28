@@ -6,6 +6,6 @@ public class MobileApp implements Observer {
 
     @Override
     public void updateStatus(Order order) {
-        System.out.println("MOBILE APP SERVICE: Order " + order.getOrderStatus() + " has been sent");
+        System.out.println("MOBILE APP SERVICE: Order " + order.getOrderNumber() + " has been sent");
     }
 }

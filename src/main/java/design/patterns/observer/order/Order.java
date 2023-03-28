@@ -1,19 +1,22 @@
 package design.patterns.observer.order;
 
 import design.patterns.observer.notification.Observer;
-import lombok.AllArgsConstructor;
 import lombok.Data;
 
 import java.util.HashSet;
 import java.util.Set;
 
 @Data
-@AllArgsConstructor
 public class Order  implements Observable {
 
     private Long orderNumber;
     private OrderStatus orderStatus;
     private Set<Observer> registeredObservers = new HashSet<>();
+
+    public Order(Long orderNumber, OrderStatus orderStatus) {
+        this.orderNumber = orderNumber;
+        this.orderStatus = orderStatus;
+    }
 
     public void changeOrderStatus(OrderStatus orderStatus) {
         setOrderStatus(orderStatus);
