@@ -20,5 +20,15 @@ public class Main {
         order.registerObserver(email);
 
         order.notifyObservers();
+
+        System.out.println("---------------------");
+
+        order.changeOrderStatus(OrderStatus.SENT);
+        order.unregisterObserver(email);
+
+        System.out.println("---------------------");
+
+        order.notifyObservers();
+
     }
 }
