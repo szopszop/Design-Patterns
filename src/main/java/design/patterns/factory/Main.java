@@ -8,8 +8,8 @@ public class Main {
 
         Factory unitFactory = new UnitFactory();
 
-        Unit tank = unitFactory.createUnit(UnitType.TANK);
-        Unit rifleman = unitFactory.createUnit(UnitType.RIFLEMAN);
+        InfantryUnit tank = unitFactory.createUnit(UnitType.TANK);
+        InfantryUnit rifleman = unitFactory.createUnit(UnitType.RIFLEMAN);
 
     }
 }
