@@ -1,4 +1,4 @@
-package design.patterns.factory;
+package design.patterns.factory.unit;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

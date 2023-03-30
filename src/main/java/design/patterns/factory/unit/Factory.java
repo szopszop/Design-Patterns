@@ -1,4 +1,4 @@
-package design.patterns.factory;
+package design.patterns.factory.unit;
 
  public abstract class Factory {
 
