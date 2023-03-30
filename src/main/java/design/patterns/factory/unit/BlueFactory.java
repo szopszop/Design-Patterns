@@ -21,7 +21,18 @@ public class BlueFactory extends Factory {
             case TANK:
                 return new Tank(100, 50, 50);
             case PLANE:
-                return new Plane(40, 70, 40);
+                return new Car(40, 70, 40);
+            default:
+                throw new UnsupportedOperationException("Wrong type");
+        }
+    }
+
+    @Override
+    public AirUnit createAirUnit(UnitType unitType) {
+        switch (unitType) {
+            case TANK:
+                return new Plane(120, 50, 50);
+            case PLANE:
             default:
                 throw new UnsupportedOperationException("Wrong type");
         }
