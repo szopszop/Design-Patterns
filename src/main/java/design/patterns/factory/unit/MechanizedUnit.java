@@ -3,9 +3,9 @@ package design.patterns.factory.unit;
 import lombok.Getter;
 
 @Getter
-public abstract class MotorizedUnit {
+public abstract class MechanizedUnit {
 
-    protected MotorizedUnit(int hp, int exp, int damageDone) {
+    protected MechanizedUnit(int hp, int exp, int damageDone) {
         this.hp = hp;
         this.exp = exp;
         this.damageDone = damageDone;

@@ -1,6 +1,6 @@
 package design.patterns.factory.unit;
 
-public class Tank extends InfantryUnit {
+public class Tank extends MechanizedUnit {
 
 
     protected Tank(int hp, int exp, int damageDone) {

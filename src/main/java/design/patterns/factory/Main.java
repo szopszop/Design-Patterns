@@ -6,10 +6,10 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Factory unitFactory = new UnitFactory();
-
-        InfantryUnit tank = unitFactory.createUnit(UnitType.TANK);
-        InfantryUnit rifleman = unitFactory.createUnit(UnitType.RIFLEMAN);
+//        InfantryFactory infantryFactory =
+//
+//        InfantryUnit tank = unitInfantryFactory.createUnit(InfantryUnitType.TANK);
+//        InfantryUnit rifleman = unitInfantryFactory.createUnit(InfantryUnitType.RIFLEMAN);
 
     }
 }
