@@ -3,10 +3,16 @@ package design.patterns.factory;
 public class Main {
 
     public static void main(String[] args) {
-        Unit tank = new Tank(200, 30, 50);
-        Unit infantryman = new Rifleman(30, 15, 10);
+
+        Factory unitFactory = new UnitFactory();
+
+        Unit tank = unitFactory.createUnit(UnitType.TANK);
+        Unit rifleman = unitFactory.createUnit(UnitType.RIFLEMAN);
+
+        Tank tank1 = new Tank(200, 50, 30);
 
 
-        }
+
     }
 }
+
