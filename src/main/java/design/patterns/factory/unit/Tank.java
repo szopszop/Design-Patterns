@@ -1,5 +1,7 @@
 package design.patterns.factory.unit;
 
+import design.patterns.factory.unit.MechanizedUnit;
+
 public class Tank extends MechanizedUnit {
 
 
