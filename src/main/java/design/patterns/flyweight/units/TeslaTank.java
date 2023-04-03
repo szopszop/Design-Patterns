@@ -1,23 +1,20 @@
 package design.patterns.flyweight.units;
 
 
+import lombok.AllArgsConstructor;
+
+@AllArgsConstructor
 public class TeslaTank {
 
-    private String name;
-    private int hp;
-    private int hpLeft;
-    private int armour;
-    private int damageDealt;
     private int x;
     private int y;
+    private int hpLeft;
+    private UnitStats stats;
 
-    public TeslaTank(String name, int hp, int armour, int damageDealt, int x, int y) {
-        this.name = name;
-        this.hp = hp;
-        this.armour = armour;
-        this.damageDealt = damageDealt;
+    public TeslaTank( int x, int y) {
+        this.stats = UnitStatsRepository.getTeslaTankUnitStats();
         this.x = x;
         this.y = y;
-        this.hpLeft = hp;
+        this.hpLeft = stats.getHp();
     }
 }

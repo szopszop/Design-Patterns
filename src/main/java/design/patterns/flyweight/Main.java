@@ -13,10 +13,10 @@ public class Main {
 
         List<Object> activeUnits = new ArrayList<>();
 
-        for (int i = 0; i < 1000; i++) {
-            activeUnits.add(new TeslaTank("Tesla Tank", 200, 100, 50, 50, 50));
-            activeUnits.add(new MagicTank("Magic Tank", 200, 100, 50, 50, 50));
-            activeUnits.add(new RainbowTank("Rainbow Tank", 200, 100, 50, 50, 50));
+        for (int i = 0; i < 100000; i++) {
+            activeUnits.add(new TeslaTank(50, 50));
+            activeUnits.add(new MagicTank(10, 10));
+            activeUnits.add(new RainbowTank( 50, 10));
         }
     }
 }
