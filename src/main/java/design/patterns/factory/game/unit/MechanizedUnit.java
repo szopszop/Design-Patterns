@@ -1,11 +1,11 @@
-package design.patterns.factory.unit;
+package design.patterns.factory.game.unit;
 
 import lombok.Getter;
 
 @Getter
-public abstract class InfantryUnit {
+public abstract class MechanizedUnit {
 
-    protected InfantryUnit(int hp, int exp, int damageDone) {
+    protected MechanizedUnit(int hp, int exp, int damageDone) {
         this.hp = hp;
         this.exp = exp;
         this.damageDone = damageDone;

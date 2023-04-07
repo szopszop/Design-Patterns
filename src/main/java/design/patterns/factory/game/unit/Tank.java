@@ -1,6 +1,6 @@
-package design.patterns.factory.unit;
+package design.patterns.factory.game.unit;
 
-import design.patterns.factory.unit.MechanizedUnit;
+import design.patterns.factory.game.unit.MechanizedUnit;
 
 public class Tank extends MechanizedUnit {
 

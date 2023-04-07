@@ -1,6 +1,6 @@
-package design.patterns.factory.unit;
+package design.patterns.factory.game.unit;
 
-import design.patterns.factory.unit.InfantryUnit;
+import design.patterns.factory.game.unit.InfantryUnit;
 
 public class Bazookaman extends InfantryUnit {
 

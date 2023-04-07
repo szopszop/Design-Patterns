@@ -1,4 +1,4 @@
-package design.patterns.factory.unit;
+package design.patterns.factory.game.unit;
 
 public abstract class AirUnit {
 

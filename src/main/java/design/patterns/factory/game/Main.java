@@ -1,13 +1,13 @@
-package design.patterns.factory;
+package design.patterns.factory.game;
 
-import design.patterns.factory.unit.*;
+import design.patterns.factory.game.unit.*;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        BlueFactory blueFactory = new BlueFactory();
-        RedFactory redFactory = new RedFactory();
+        Factory blueFactory = new BlueFactory();
+        Factory redFactory = new RedFactory();
 
         MechanizedUnit blueTank = blueFactory.createMechanizedUnit(UnitType.TANK);
         InfantryUnit blueRifleman = blueFactory.createInfantryUnit(UnitType.RIFLEMAN);
