@@ -14,20 +14,24 @@ public class FileReader {
 
     public List<MathOperation> readFile(String filePath) throws FileNotFoundException {
         File file = new File(filePath);
-
+        Validation.isFileEmpty(file);
         Scanner scanner = new Scanner(file);
         MathOperationFactory factory = new MathOperationFactory();
         List<MathOperation> operations = new LinkedList<>();
 
         while (scanner.hasNextLine()) {
             String equation = scanner.nextLine();
-
+            Validation.inputValidation(equation);
             OperationType operationType = Util.getOperationType(equation);
             Double number = Util.getNumber(equation);
             MathOperation operation = factory.calculate(operationType, number);
             operations.add(operation);
-
+            if (Validation.isWordApplyInLine(equation)) {
+                scanner.close();
+                return operations;
+            }
         }
+        Validation.noApplyException();
         return operations;
     }
 }
