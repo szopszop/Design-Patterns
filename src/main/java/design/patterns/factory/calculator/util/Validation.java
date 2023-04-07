@@ -19,17 +19,17 @@ public class Validation {
         if (!isOperationValid(equation)) {
             throw new IllegalArgumentException("Wrong operation type");
         }
-        if (!isWordApplyInLine(equation)) {
+        if (!isNumberValid(equation)) {
             throw new IllegalArgumentException("Wrong number");
         }
     }
 
     static boolean isFormatValid(String equation) {
-        return equation.split(" ").length ==2;
+        return equation.split(" ").length == 2;
     }
 
     static boolean isOperationValid(String equation) {
-        String operation = equation.split("")[0].toUpperCase();
+        String operation = equation.split(" ")[0].toUpperCase();
         try {
             OperationType.valueOf(operation);
             return true;
@@ -38,12 +38,17 @@ public class Validation {
         }
     }
 
+    static boolean isNumberValid(String equation) {
+        String number = equation.split(" ")[1];
+        return number.chars().allMatch(Character:: isDigit);
+    }
+
     static boolean isWordApplyInLine(String equation) {
         String operation = equation.split(" ")[0].toUpperCase();
         return operation.equals(String.valueOf(OperationType.APPLY));
     }
 
-    public static void noApplyException() {
+    public static void noApplyWordException() {
         throw new IllegalStateException("Apply word has not been found in the file");
     }
 

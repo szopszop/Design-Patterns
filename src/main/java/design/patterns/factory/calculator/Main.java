@@ -19,7 +19,9 @@ public class Main {
             for (MathOperation operation : operations) {
                 result = operation.performOperation(result);
             }
-            System.out.println(result);
+            String equation = Util.buildEquation(operations, initialValue);
+            System.out.println(equation + " = " + Util.getFormattedNumber(result));
+
         } catch (FileNotFoundException e) {
             System.out.println("File not found.");
             System.exit(-1);

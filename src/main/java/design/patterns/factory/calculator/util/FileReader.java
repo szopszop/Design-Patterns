@@ -13,6 +13,7 @@ import java.util.Scanner;
 public class FileReader {
 
     public List<MathOperation> readFile(String filePath) throws FileNotFoundException {
+
         File file = new File(filePath);
         Validation.isFileEmpty(file);
         Scanner scanner = new Scanner(file);
@@ -31,7 +32,9 @@ public class FileReader {
                 return operations;
             }
         }
-        Validation.noApplyException();
+
+        Validation.noApplyWordException();
         return operations;
+
     }
 }
