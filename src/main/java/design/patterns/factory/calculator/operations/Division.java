@@ -12,9 +12,6 @@ public class Division implements MathOperation {
 
     @Override
     public double performOperation(double result) {
-        if (number == 0) {
-            throw new ArithmeticException("Division by 0!");
-        }
         return result / number;
     }
 }

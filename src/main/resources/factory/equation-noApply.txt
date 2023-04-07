@@ -1,0 +1,4 @@
+add 5
+divide 10
+add 3
+divide 0
