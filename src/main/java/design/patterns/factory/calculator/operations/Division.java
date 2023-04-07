@@ -6,7 +6,9 @@ import lombok.Getter;
 
 @Getter
 @AllArgsConstructor
-public record Division(double number) implements MathOperation {
+public class Division implements MathOperation {
+
+    private final double number;
 
     @Override
     public double performOperation(double result) {

@@ -6,8 +6,9 @@ import lombok.Getter;
 
 @Getter
 @AllArgsConstructor
-public record Multiplication(double number) implements MathOperation {
+public class Multiplication implements MathOperation {
 
+    private final double number;
     @Override
     public double performOperation(double result) {
         return result * number;

@@ -6,10 +6,11 @@ import lombok.Getter;
 
 @Getter
 @AllArgsConstructor
-public record Addition(double number) implements MathOperation {
+public class Addition implements MathOperation {
+    private final double number;
 
     @Override
-    public double performOperation(double number) {
-        return 0;
+    public double performOperation(double result) {
+        return result + number;
     }
 }

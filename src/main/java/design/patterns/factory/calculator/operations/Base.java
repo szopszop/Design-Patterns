@@ -6,7 +6,9 @@ import lombok.Getter;
 
 @Getter
 @AllArgsConstructor
-public record Base(double number) implements MathOperation {
+public class Base implements MathOperation {
+
+    private final double number;
 
     @Override
     public double performOperation(double result) {

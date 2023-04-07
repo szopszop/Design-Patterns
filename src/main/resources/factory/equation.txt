@@ -1,0 +1,5 @@
+add 5
+divide 10
+add 3
+divide 3
+apply 30
